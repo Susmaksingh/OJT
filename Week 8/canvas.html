@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="mycanvas1" width="200" height="100" style="border: 1px solid #2d2323;">
+            Your browser dose not support the html canvas
+        </canvas>
+
+        <!-----2nd canvas-->
+        <canvas id="mycanvas2" width="200" height="100" style="border: 1px solid #e82727;">
+            Your browser dose not support the html canvas
+        </canvas>
+
+        <script>
+            //drawing on my first canvas
+            var c1=document.getElementById("mycanvas1");
+            var ctx1=c1.getContext("2d");
+            ctx1.moveTo(0,0);
+            ctx1.lineTo(200,100);
+            ctx1.stroke();
+
+            //drawing on my 2nd canvas
+            var c2=document.getElementById("mycanvas2");
+            var ctx2=c2.getContext("2d");
+            ctx2.moveTo(0,0);
+            ctx2.lineTo(200,100);
+            ctx2.stroke();
+        </script>
+    </body>
+</html>

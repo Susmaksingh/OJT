@@ -1,0 +1,118 @@
+<!--validation-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootsstrap layouts</title>
+    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <body>
+       <div class="container mt-5">
+        <h2>Form with validation</h2>
+        <form id="myform" class="needs-validation" novalidate>
+            <!---row1 to with 2 columns-->
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="ValidationCustom01">FirstName</label>
+                    <input type="text" class="form-control" id="ValidationCustom01" placeholder="FirstName" required>
+                </div>
+                <div class="valid-feedback">
+                    Look Good
+                </div>
+                <div class="invalid-feedback">
+                    please provide tha first name.
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="ValidationCustom01">LastName</label>
+                    <input type="text" class="form-control" id="ValidationCustom01" placeholder="LastName" required>
+                </div>
+                <div class="valid-feedback">
+                    Look Good
+                </div>
+                <div class="invalid-feedback">
+                    please provide tha last name.
+                </div>
+
+            </div>
+        </div>
+
+            <!---2row with 2 columns-->
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="ValidationCustom01">City</label>
+                    <input type="text" class="form-control" id="ValidationCustom01" placeholder="City" required>
+                </div>
+                <div class="valid-feedback">
+                    Look Good
+                </div>
+                <div class="invalid-feedback">
+                    please provide tha City name.
+                </div>
+
+                </div>
+                <div class="form-row"></div>
+                <div class="col-md-6 mb-3">
+                <label for="ValidationCustom01">State</label>
+                    <input type="text" class="form-control" id="ValidationCustom01" placeholder="State" required>
+                </div>
+                <div class="valid-feedback">
+                    Look Good
+                </div>
+                <div class="invalid-feedback">
+                    please provide tha State name.
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <label for="ValidationCustom01">Zip code</label>
+                    <input type="text" class="form-control" id="ValidationCustom01" placeholder="State" required>
+                </div>
+                <div class="valid-feedback">
+                    Look Good
+                </div>
+                <div class="invalid-feedback">
+                    please provide tha State name.
+                </div></div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            I agree to terms and condition
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree the condition before submitting the form.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+       </div>
+
+
+       <script>
+        (function(){
+            'use strict';
+            window.addEventListener('load', function(){
+                //fetch all the value from the form
+                var forms=document.getElementsByClassName('needs-validation');
+
+                var validation= Array.prototype.filter.call(forms,function(form){
+                    form.addEventListener('submit', function(event){
+                        if(form.checkValidity()==false)
+                    {
+                        event.preventDeafault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                    },false)
+                });
+            },false);
+        })
+       </script>
+    </body>
+</html>

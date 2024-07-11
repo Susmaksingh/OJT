@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration form
+        </title>
+    </head>
+    <body>
+        <table cellpadding="2" , width="20%", bgcolor="lightblue", align="center", cellspacing="2", border="3">
+            <tr>
+                <td colspan="2"><center><font size="4"><b>Student Registration</b></font></center></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="textname" id="textname" size="30"></td>
+            </tr>
+            <tr>
+                <td>Father Name</td>
+                <td><input type="text" name="fathername" id="fathername" size="30"></td>
+            </tr>
+            <tr>
+                <td>Postal Address</td>
+                <td><input type="text" name="PostalAddress" id="PostalAddress" size="30"></td>
+            </tr>
+            <tr>
+                <td>Personal Address</td>
+                <td><input type="text" name="PersonalAddress" id="PersonalAddress" size="30"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="Gender" value="male" size="30">Male
+                    <input type="radio" name="Gender" value="female" size="30">Female
+                </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><select name="City">
+                    <option value="1" selected>Select</option>
+                    <option value="New Delhi" selected>NewDelhi</option>
+                    <option value="Mumbai" selected>Mumbai</option>
+                    <option value="Goa" selected>Goa</option>
+                    <option value="kolkata" selected>kolkata</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td><select name="Course">
+                    <option value="1" selected>Select</option>
+                    <option value="btech" selected>btech</option>
+                    <option value="Mac" selected>Mac</option>
+                    <option value="MBA" selected>MBA</option>
+                    <option value="DCA" selected>DCA</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="reset" ></td>
+                <td colspan="2"><input type="submit" value="submit form"></td>
+            </tr>
+        </table>
+    </body>
+</html>
